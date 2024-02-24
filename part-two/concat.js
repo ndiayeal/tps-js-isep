@@ -1,0 +1,1 @@
+//fonction qui prend en n parametres et retourne la concatenation des ces parametres
