@@ -3,8 +3,8 @@
 let premier = document.getElementById("p1");
 console.log(premier.nodeName ,premier.id); // affiche "P p1"
 
-let paragraphes = document.getElementsByTagName("p");
-console.log(paragraphes[1].nodeName, paragraphes[1].id); // affiche "P p2"
+// let paragraphes = document.getElementsByTagName("p");
+// console.log(paragraphes[1].nodeName, paragraphes[1].id); // affiche "P p2"
 
 // let mains = document.getElementsByClassName("main");
 // console.log( mains[0].nodeName , mains[0].className); // affiche " SECTION main "
