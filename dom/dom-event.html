@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>JavaScript - Part 4</title>
+
+
+	<!--
+	<script>
+		let prenom = "Moussa";
+		console.log(prenom);
+		console.log(40 + 8 + 23 - 10);
+	</script>
+	-->
+</head>
+
+<body>
+	<h1 id="titre">JavaScript - Le DOM(2)</h1>
+
+	<!----- Méthode 1 : propriété on<event> du HTML ----->
+	<!-- <p onclick="alert('ISEP !')">ISEP</p>
+	<p id="galilee" onmouseover="console.log('Galilée');">Institut Galilée</p> -->
+	<!----- Fin Méthode 1 : propriété on<event> du HTML ----->
+
+	<!----- Méthode 2 : propriété on<event> des nœuds ----->
+	<!-- <script>
+		document.onclick = () => {
+			console.log(" Clic dans la page détecté !");
+		};
+		document.onkeypress = affToucheClavier;
+
+		function affToucheClavier(e) {
+			console.log(" Touche pressée : ", e.key, " Code :", e.keyCode);
+		}
+	</script> -->
+
+	<!-- <p id="SPN">Sorbonne Paris Nord </p>
+	<p id="IG">Institut Galilée</p>
+	<script>
+		let spn = document.getElementById("SPN");
+		let ig = document.querySelector("#IG");
+		spn.onclick = (event) => { alert(" Sorbonne !"); };
+		ig.onmouseover = (event) => { alert(" Galilée !"); };
+	</script> -->
+	<!----- Fin Méthode 2 : propriété on<event> des nœuds ----->
+
+	<!----- Méthode 3 : auditeur ----->
+	<p id="SPN">Sorbonne Paris Nord</p>
+	<p id="IG">Institut Galilée</p>
+	<script src="dom-event.js"></script>
+	
+	<!----- Fin Méthode 3 : auditeur ----->
+		
+</body>
+
+</html>

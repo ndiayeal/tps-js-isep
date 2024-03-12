@@ -129,9 +129,82 @@ function puissance(x, n) {
 	return negatif ? 1 / resultat : resultat;
 }
 
-// Exemple d'utilisation :
 
-console.log(puissance(2, 2));
-console.log(puissance(2, 3));
-console.log(puissance(2, 0));
-console.log(puissance(2, -1));
+function puissancerec(x, n) {
+	if (n === 0) {
+			return 1;
+	} else if (n > 0) {
+			return x * puissancerec(x, n - 1);
+	} else {
+			return 1 / puissancerec(x, -n);
+	}
+}
+
+function creerMultiplicateur(n) {
+	return function(x) {
+			return x * n;
+	};
+}
+
+function creerSequence(init, step) {
+	let currentValue = init;
+
+	return function() {
+			let result = currentValue;
+			currentValue += step;
+			return result;
+	};
+}
+
+function fibonacci(u0, u1) {
+	let current = u0;
+	let next = u1;
+
+	return function() {
+			let temp = current;
+			current = next;
+			next = temp + next;
+			
+			console.log("temp", temp);
+			console.log("current", current);
+			console.log("next", next);
+			return temp;
+	};
+}
+
+
+
+// console.log(puissance(2, 2));
+// console.log(puissance(2, 3));
+// console.log(puissance(2, 0));
+// console.log(puissance(2, -1));
+
+// console.log("--------------------");
+
+// console.log(puissancerec(2, 2));
+// console.log(puissancerec(2, 3));
+// console.log(puissancerec(2, 0));
+// console.log(puissancerec(2, -1));
+
+
+// let multiplicateurPar2 = creerMultiplicateur(2);
+// console.log(multiplicateurPar2(5));
+
+// let multiplicateurPar3 = creerMultiplicateur(3);
+// console.log(multiplicateurPar3(5));
+
+
+let sequence = creerSequence(2, 3);
+console.log(sequence());
+console.log(sequence());
+console.log(sequence());
+console.log(sequence());
+
+
+// let generateFibonacci = fibonacci(0, 1);
+// console.log(generateFibonacci()); // Output: 0
+// console.log(generateFibonacci()); // Output: 1
+// console.log(generateFibonacci()); // Output: 1
+// console.log(generateFibonacci()); // Output: 2
+// console.log(generateFibonacci()); // Output: 3
+// console.log(generateFibonacci()); // Output: 5
